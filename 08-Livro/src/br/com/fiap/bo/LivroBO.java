@@ -19,6 +19,10 @@ public class LivroBO {
 	
 	public void atualizar(Livro livro) throws Exception{
 		Livro l = buscarPorIsbn(livro.getIsbn());
+		if (livro.getTitulo() == null 
+					|| livro.getTitulo().length() < 2 ){
+			throw new Exception("Título inválido");
+		}
 		lista.remove(l);
 		lista.add(livro);
 	}
