@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!-- Taglib para utilizar a biblioteca de tags do JSTL -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,6 +27,8 @@
 			<th>Autor</th>
 			<th>Número de Páginas</th>
 			<th>ISBN</th>
+			<th>Data Publicação</th>
+			<th>Data Registro</th>
 			<th></th>
 		</tr>
 		<!-- Utiliza a tag de foreach para percorrer a lista
@@ -36,6 +39,14 @@
 				<td>${risos.autor }</td>
 				<td>${risos.numeroPagina }</td>
 				<td>${risos.isbn }</td>
+				<td>
+					<fmt:formatDate pattern="dd/MM/yyyy"
+						value="${risos.dataPublicacao.time }"/>
+				</td>
+				<td>
+					<fmt:formatDate pattern="dd/MM/yyyy"
+						value="${risos.dataRegistro.time }"/>
+				</td>
 				<td>
 					<c:url value="livroServlet" var="link">
 						<c:param name="isbn" value="${risos.isbn }"/>

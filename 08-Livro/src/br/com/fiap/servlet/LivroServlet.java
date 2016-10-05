@@ -1,6 +1,9 @@
 package br.com.fiap.servlet;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -11,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.fiap.bean.Livro;
 import br.com.fiap.bo.LivroBO;
+import br.com.fiap.util.DataUtils;
 
 @WebServlet("/livroServlet")
 public class LivroServlet extends HttpServlet {
@@ -61,9 +65,10 @@ public class LivroServlet extends HttpServlet {
 		
 		switch (acao) {
 		case "alterar":
-			//Recuperar as informações do formulário
-			Livro li = carregarLivroForm(req);
+			Livro li = null;
 			try {
+				//Recuperar as informações do formulário
+				li = carregarLivroForm(req);
 				//Chama o método atualizar do BO
 				bo.atualizar(li);
 				//Mensagem de sucesso
@@ -101,12 +106,17 @@ public class LivroServlet extends HttpServlet {
 			}
 			break;
 		case "cadastrar":
-			Livro livro = carregarLivroForm(req);
-			
-			bo.cadastrar(livro);
-			
-			//Exibe uma mensagem para a tela
-			req.setAttribute("chave", "Cadastro realizado!");
+			Livro livro;
+			try {
+				livro = carregarLivroForm(req);
+				bo.cadastrar(livro);
+				//Exibe uma mensagem para a tela
+				req.setAttribute("chave", "Cadastro realizado!");
+			} catch (ParseException e) {
+				e.printStackTrace();
+				//Exibe uma mensagem para a tela
+				req.setAttribute("chave", "Erro!");
+			}
 			//Redireciona para uma jsp
 			req.getRequestDispatcher("cadastro-livro.jsp").forward(req, resp);
 			break;
@@ -117,15 +127,27 @@ public class LivroServlet extends HttpServlet {
 		
 	}
 
-	private Livro carregarLivroForm(HttpServletRequest req) {
+	private Livro carregarLivroForm(HttpServletRequest req) throws ParseException {
 		//Recuperar os valores do formulário
 		String titulo = req.getParameter("titulo");
 		long isbn = Long.parseLong(req.getParameter("isbn"));
 		String autor = req.getParameter("autor");
 		int pagina = Integer.parseInt(req.getParameter("numero"));
 		
+		//Recuperar o valor data do campo do formulário
+		String data = req.getParameter("dataPublicacao");		
+		Calendar dataPublicacao = DataUtils.parseCalendar(data);
+		
+		//Recuperar a data de registro
+		String registro = req.getParameter("dataRegistro");
+		Calendar dataRegistro = Calendar.getInstance();
+		if (registro != null){
+			dataRegistro = DataUtils.parseCalendar(registro);
+		}
+		
 		//Instanciar o livro
-		Livro livro = new Livro(isbn,titulo,pagina,autor);
+		Livro livro = new Livro(isbn,titulo,pagina,autor,
+				dataPublicacao, dataRegistro);
 		return livro;
 	}
 		

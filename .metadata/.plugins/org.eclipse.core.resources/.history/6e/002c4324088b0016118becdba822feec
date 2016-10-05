@@ -1,0 +1,20 @@
+package br.com.fiap.util;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class DataUtils {
+
+	public static Calendar parseCalendar(String data){
+		//Objeto que converte a string para date
+		SimpleDateFormat conversor = 
+					new SimpleDateFormat("dd/MM/yyyy");
+		//Criar o Calendar
+		
+		//Setar a data
+		
+		//Retornar a data
+		
+	}
+	
+}

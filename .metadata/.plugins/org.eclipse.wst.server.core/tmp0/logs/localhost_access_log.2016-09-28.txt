@@ -48,3 +48,11 @@
 0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:48:04 -0300] "GET /08-Livro/livroServlet?acao=listar HTTP/1.1" 200 3400
 0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:48:05 -0300] "GET /08-Livro/livroServlet?isbn=1&acao=abrirForm HTTP/1.1" 200 2717
 0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:48:08 -0300] "POST /08-Livro/livroServlet HTTP/1.1" 200 2783
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:53:31 -0300] "GET /08-Livro/altera-livro.jsp HTTP/1.1" 200 2709
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:53:31 -0300] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:53:31 -0300] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:53:45 -0300] "GET /08-Livro/cadastro-livro.jsp HTTP/1.1" 200 2646
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:53:49 -0300] "POST /08-Livro/livroServlet HTTP/1.1" 200 2665
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:53:51 -0300] "GET /08-Livro/livroServlet?acao=listar HTTP/1.1" 200 3772
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:53:56 -0300] "POST /08-Livro/livroServlet HTTP/1.1" 200 3469
+0:0:0:0:0:0:0:1 - - [28/Sep/2016:11:53:58 -0300] "POST /08-Livro/livroServlet HTTP/1.1" 200 3097

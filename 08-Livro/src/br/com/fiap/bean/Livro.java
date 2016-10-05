@@ -1,6 +1,9 @@
 package br.com.fiap.bean;
 
-public class Livro {
+import java.io.Serializable;
+import java.util.Calendar;
+
+public class Livro implements Serializable {
 
 	private long isbn;
 	
@@ -10,9 +13,26 @@ public class Livro {
 	
 	private String autor;
 	
+	private Calendar dataPublicacao;
+	
+	private Calendar dataRegistro;
+	
 	public Livro() {
 		super();
 	}
+
+	public Livro(long isbn, String titulo, int numeroPagina, String autor, Calendar dataPublicacao,
+			Calendar dataRegistro) {
+		super();
+		this.isbn = isbn;
+		this.titulo = titulo;
+		this.numeroPagina = numeroPagina;
+		this.autor = autor;
+		this.setDataPublicacao(dataPublicacao);
+		this.setDataRegistro(dataRegistro);
+	}
+
+
 
 	public Livro(long isbn, String titulo, int numeroPagina, String autor) {
 		super();
@@ -52,6 +72,22 @@ public class Livro {
 
 	public void setAutor(String autor) {
 		this.autor = autor;
+	}
+
+	public Calendar getDataPublicacao() {
+		return dataPublicacao;
+	}
+
+	public void setDataPublicacao(Calendar dataPublicacao) {
+		this.dataPublicacao = dataPublicacao;
+	}
+
+	public Calendar getDataRegistro() {
+		return dataRegistro;
+	}
+
+	public void setDataRegistro(Calendar dataRegistro) {
+		this.dataRegistro = dataRegistro;
 	}
 	
 }

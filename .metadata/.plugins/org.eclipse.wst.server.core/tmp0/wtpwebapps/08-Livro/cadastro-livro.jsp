@@ -33,6 +33,11 @@
 					<label for="idPagina">Número de Páginas</label>
 					<input type="text" name="numero" id="idPagina" class="form-control">
 				</div>
+				<div class="form-group">
+					<label for="idData">Data de publicação</label>
+					<input type="text" name="dataPublicacao" 
+									id="idData" class="form-control">
+				</div>
 				<div>
 					<input type="submit" value="Salvar" class="btn btn-primary">
 				</div>
