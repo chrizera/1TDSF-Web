@@ -44,6 +44,15 @@
 							value="${livro.dataPublicacao.time }"/>" >
 				</div>
 				<div class="form-group">
+					<label for="dtRegistro">Data Registro</label>
+					<input type="text" name="dataRegistro" 
+						class="form-control" id="dtRegistro"
+						readonly
+						value="<fmt:formatDate 
+							value="${livro.dataRegistro.time }"
+							pattern="dd/MM/yyyy"/>"	>
+				</div>
+				<div class="form-group">
 					<label for="idPagina">Número de Páginas</label>
 					<input value="${livro.numeroPagina }" type="text" name="numero" id="idPagina" class="form-control">
 				</div>
