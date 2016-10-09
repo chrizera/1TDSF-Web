@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Cadastro de Vaga</title>
+<%@ include file="includes.jsp" %>
+</head>
+<body>
+<%@ include file="menu.jsp" %>
+<div class="container">
+	
+	<form>
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<label>Título</label>
+			</div>
+			<div class="col-md-6 form-group">
+				<label>Cargo</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<label>Salário</label>
+			</div>
+			<div class="col-md-6 form-group">
+				<label>Data Publicação</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<label>Quantidade</label>
+			</div>
+			<div class="col-md-6 form-group">
+				<label>Empresa</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 form-group">
+				<label>Descrição</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<input type="submit" value="Salvar" class="btn btn-primary">
+			</div>
+		</div>
+	</form>
+	
+</div>
+</body>
+</html>

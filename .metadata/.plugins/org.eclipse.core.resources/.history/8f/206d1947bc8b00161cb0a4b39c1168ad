@@ -1,0 +1,11 @@
+package br.com.fiap.servlet;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/vagaServlet")
+public class VagaServlet extends HttpServlet {
+
+	
+	
+}

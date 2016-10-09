@@ -1,0 +1,15 @@
+127.0.0.1 - - [06/Oct/2016:08:44:50 -0300] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:08:44:56 -0300] "GET /FIAPJobs/cadastro-vaga.jsp HTTP/1.1" 200 4518
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:08:44:56 -0300] "GET /FIAPJobs/css/bootstrap.min.css HTTP/1.1" 200 121200
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:08:44:56 -0300] "GET /FIAPJobs/js/bootstrap.min.js HTTP/1.1" 200 37045
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:08:44:56 -0300] "GET /FIAPJobs/js/jquery-3.1.0.min.js HTTP/1.1" 200 86351
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:08:44:56 -0300] "GET /favicon.ico HTTP/1.1" 404 1016
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:08:44:56 -0300] "GET /favicon.ico HTTP/1.1" 404 1016
+127.0.0.1 - - [06/Oct/2016:08:55:39 -0300] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:08:55:41 -0300] "GET /FIAPJobs/cadastro-vaga.jsp HTTP/1.1" 200 4564
+127.0.0.1 - - [06/Oct/2016:09:09:01 -0300] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:09:09:04 -0300] "GET /FIAPJobs/cadastro-vaga.jsp HTTP/1.1" 200 4519
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:09:09:08 -0300] "GET /FIAPJobs/vagaServlet?acao=abrir-cadastro HTTP/1.1" 200 4611
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:09:11:34 -0300] "GET /FIAPJobs/vagaServlet?acao=abrir-cadastro HTTP/1.1" 200 4835
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:09:13:02 -0300] "GET /FIAPJobs/vagaServlet?acao=abrir-cadastro HTTP/1.1" 200 4835
+0:0:0:0:0:0:0:1 - - [06/Oct/2016:09:13:14 -0300] "GET /FIAPJobs/vagaServlet?acao=abrir-cadastro HTTP/1.1" 200 4835
